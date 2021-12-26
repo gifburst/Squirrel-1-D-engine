@@ -20,9 +20,9 @@ del "temp.bat"
 if exist "Y:\" net use Y: /delete
 cls
 set input=0
-echo Domination Menu
+echo Squirrel 1-D engine Menu
 echo ------------------
-echo 1 = Game Options
+echo 1 = Engine Options
 echo 2 = Map Builder
 echo 3 = Controls
 echo 4 = Exit
@@ -35,7 +35,7 @@ goto menu
 :gameoptions
 cls
 set input=0
-echo Domination Game Options
+echo Squirrel 1-D engine Options
 echo ------------------------
 echo %username% [%score%]
 echo ------------------------
@@ -60,7 +60,7 @@ if "%renderdistance%"=="5" set levels=Normal
 if "%renderdistance%"=="4" set levels=Minimum
 cls
 set input=0
-echo Domination Settings
+echo Squirrel 1-D engine Settings
 echo ---------------------------
 echo Render Distance: %renderdistance%
 echo Overall Quality: %levels%
@@ -76,7 +76,7 @@ goto renderdistanceset
 :menub
 cls
 set input=0
-echo Domination Map Builder
+echo Squirrel 1-D engine Map Builder
 echo -----------------------
 echo 1 = Create Map
 echo 2 = Delete Map
@@ -145,18 +145,46 @@ goto startb
 :mainb
 cls
 set x%px%x%py%=@
-echo %x1x1%%x2x1%%x3x1%%x4x1%%x5x1%%x6x1%%x7x1%%x8x1%%x9x1%%x10x1%%x11x1%%x12x1%%x13x1%%x14x1%%x15x1%%x16x1%%x17x1%%x18x1%%x19x1%%x20x1%
-echo %x1x2%%x2x2%%x3x2%%x4x2%%x5x2%%x6x2%%x7x2%%x8x2%%x9x2%%x10x2%%x11x2%%x12x2%%x13x2%%x14x2%%x15x2%%x16x2%%x17x2%%x18x2%%x19x2%%x20x2%
-echo %x1x3%%x2x3%%x3x3%%x4x3%%x5x3%%x6x3%%x7x3%%x8x3%%x9x3%%x10x3%%x11x3%%x12x3%%x13x3%%x14x3%%x15x3%%x16x3%%x17x3%%x18x3%%x19x3%%x20x3%
-echo %x1x4%%x2x4%%x3x4%%x4x4%%x5x4%%x6x4%%x7x4%%x8x4%%x9x4%%x10x4%%x11x4%%x12x4%%x13x4%%x14x4%%x15x4%%x16x4%%x17x4%%x18x4%%x19x4%%x20x4%
-echo %x1x5%%x2x5%%x3x5%%x4x5%%x5x5%%x6x5%%x7x5%%x8x5%%x9x5%%x10x5%%x11x5%%x12x5%%x13x5%%x14x5%%x15x5%%x16x5%%x17x5%%x18x5%%x19x5%%x20x5%
-echo %x1x6%%x2x6%%x3x6%%x4x6%%x5x6%%x6x6%%x7x6%%x8x6%%x9x6%%x10x6%%x11x6%%x12x6%%x13x6%%x14x6%%x15x6%%x16x6%%x17x6%%x18x6%%x19x6%%x20x6%
-echo %x1x7%%x2x7%%x3x7%%x4x7%%x5x7%%x6x7%%x7x7%%x8x7%%x9x7%%x10x7%%x11x7%%x12x7%%x13x7%%x14x7%%x15x7%%x16x7%%x17x7%%x18x7%%x19x7%%x20x7%
-echo %x1x8%%x2x8%%x3x8%%x4x8%%x5x8%%x6x8%%x7x8%%x8x8%%x9x8%%x10x8%%x11x8%%x12x8%%x13x8%%x14x8%%x15x8%%x16x8%%x17x8%%x18x8%%x19x8%%x20x8%
-echo %x1x9%%x2x9%%x3x9%%x4x9%%x5x9%%x6x9%%x7x9%%x8x9%%x9x9%%x10x9%%x11x9%%x12x9%%x13x9%%x14x9%%x15x9%%x16x9%%x17x9%%x18x9%%x19x9%%x20x9%
-echo %x1x10%%x2x10%%x3x10%%x4x10%%x5x10%%x6x10%%x7x10%%x8x10%%x9x10%%x10x10%%x11x10%%x12x10%%x13x10%%x14x10%%x15x10%%x16x10%%x17x10%%x18x10%%x19x10%%x20x10%
-echo %x1x11%%x2x11%%x3x11%%x4x11%%x5x11%%x6x11%%x7x11%%x8x11%%x9x11%%x10x11%%x11x11%%x12x11%%x13x11%%x14x11%%x15x11%%x16x11%%x17x11%%x18x11%%x19x11%%x20x11%
-echo %x1x12%%x2x12%%x3x12%%x4x12%%x5x12%%x6x12%%x7x12%%x8x12%%x9x12%%x10x12%%x11x12%%x12x12%%x13x12%%x14x12%%x15x12%%x16x12%%x17x12%%x18x12%%x19x12%%x20x12%
+echo %x1x1%%x2x1%%x3x1%
+echo %x1x2%%x2x2%%x3x2%
+echo %x1x3%%x2x3%%x3x3%
+echo %x1x4%%x2x4%%x3x4%
+echo %x1x5%%x2x5%%x3x5%
+echo %x1x6%%x2x6%%x3x6%
+echo %x1x7%%x2x7%%x3x7%
+echo %x1x8%%x2x8%%x3x8%
+echo %x1x9%%x2x9%%x3x9%
+echo %x1x10%%x2x10%%x3x10%
+echo %x1x11%%x2x11%%x3x11%
+echo %x1x12%%x2x12%%x3x12%
+echo %x1x13%%x2x13%%x3x13%
+echo %x1x14%%x2x14%%x3x14%
+echo %x1x15%%x2x15%%x3x15%
+echo %x1x16%%x2x16%%x3x16%
+echo %x1x17%%x2x17%%x3x17%
+echo %x1x18%%x2x18%%x3x18%
+echo %x1x19%%x2x19%%x3x19%
+echo %x1x20%%x2x20%%x3x20%
+echo %x1x21%%x2x21%%x3x21%
+echo %x1x22%%x2x22%%x3x22%
+echo %x1x23%%x2x23%%x3x23%
+echo %x1x24%%x2x24%%x3x24%
+echo %x1x25%%x2x25%%x3x25%
+echo %x1x26%%x2x26%%x3x26%
+echo %x1x27%%x2x27%%x3x27%
+echo %x1x28%%x2x28%%x3x28%
+echo %x1x29%%x2x29%%x3x29%
+echo %x1x30%%x2x30%%x3x30%
+echo %x1x31%%x2x31%%x3x31%
+echo %x1x32%%x2x32%%x3x32%
+echo %x1x33%%x2x33%%x3x33%
+echo %x1x34%%x2x34%%x3x34%
+echo %x1x35%%x2x35%%x3x35%
+echo %x1x36%%x2x36%%x3x36%
+echo %x1x37%%x2x37%%x3x37%
+echo %x1x38%%x2x38%%x3x38%
+echo %x1x39%%x2x39%%x3x39%
+echo %x1x40%%x2x40%%x3x40%
 echo ----------------------
 if "%build%"=="1" echo Build: No
 if "%build%"=="2" echo Build: Yes
@@ -454,7 +482,7 @@ if exist "%game%\Domination Game\start.dat" goto starting
 set input=0
 echo Domination Lobby
 echo ---------------------------
-type "%game%\Domination Game\lobby.dat"
+type "%game%\Squirrel 1-D engine\lobby.dat"
 echo Map: %map%
 echo ---------------------------
 if "%host%"=="n" timeout /t 2 >nul
@@ -495,7 +523,7 @@ set /a players-=1
 set /a players+=1
 goto render
 :render
-call "%game%\Domination Game\map.bat"
+call "%game%\Squirrel 1-D engine\map.bat"
 set fire=n
 set x=0
 set y=1
@@ -775,7 +803,7 @@ set /a score+=%players%-1
 echo set score=%score% >"save.bat"
 echo set renderdistance=%renderdistance% >>"save.bat"
 cls
-echo You Are The Dominator!
+echo You Have won
 echo ----------------------
 timeout /t 5 >nul
 goto closegame
@@ -784,7 +812,7 @@ cls
 set input=0
 echo Domination Game
 echo ---------------------------
-type "%game%\Domination Game\lobby.dat"
+type "%game%\Squirrel 1-D engine\lobby.dat"
 echo Map: %map%
 echo ---------------------------
 echo 1 = Back
@@ -807,7 +835,7 @@ set /a score-=1
 echo set score=%score% >"save.bat"
 echo set renderdistance=%renderdistance% >>"save.bat"
 cls
-echo You Have Been Dominated!
+echo You Have Been killed!
 echo ------------------------
 timeout /t 5 >nul
 goto gameoptions
